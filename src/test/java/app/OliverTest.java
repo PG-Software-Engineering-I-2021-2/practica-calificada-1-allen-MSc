@@ -3,8 +3,6 @@ package app;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class OliverTest {
 
     @Test
@@ -25,7 +23,7 @@ public class OliverTest {
         oliver.regitrarLibro("Software Engineering 8th edition", "2009", sommerville, "Software Engineering");
         oliver.regitrarLibro("Software Engineering 9th edition", "2010", sommerville, "Software Engineering");
 
-        Assert.assertEquals(oliver.getLibros().size(), 4);
+        Assert.assertEquals(4, oliver.getLibros().size());
     }
 
 
@@ -37,7 +35,7 @@ public class OliverTest {
         oliver.regitrarEstudiante("allen@utec.edu.pe", "969888777", "Software Engineering");
         oliver.regitrarEstudiante("pepito@utec.edu.pe", "969777666", "Computer Science");
 
-        Assert.assertEquals(oliver.getEstudiantes().size(), 2);
+        Assert.assertEquals(2, oliver.getEstudiantes().size());
     }
 
     @Test
@@ -53,7 +51,7 @@ public class OliverTest {
         oliver.regitrarLibro("Techniques and Environments for Big Data 8th edition", "2010", kim, "Computer Science");
         oliver.regitrarLibro("Techniques and Environments for Big Data 9th edition", "2011", kim, "Computer Science");
 
-        Assert.assertEquals(oliver.buscarLibrosPorAutor(sommerville).size(), 2);
+        Assert.assertEquals(2, oliver.buscarLibrosPorAutor(sommerville).size());
     }
 
     @Test
@@ -69,7 +67,7 @@ public class OliverTest {
         oliver.regitrarEstudiante("pepito@utec.edu.pe", "969777666", "Computer Science");
 
 
-        Assert.assertEquals(oliver.notificarOfertasPorCategoría("Computer Science").size(), 1);
-        Assert.assertEquals(oliver.notificarOfertasPorCategoría("Computer Science").get(0).getCorreo(), "pepito@utec.edu.pe");
+        Assert.assertEquals(1, oliver.notificarOfertasPorCategoria("Computer Science").size());
+        Assert.assertEquals("pepito@utec.edu.pe", oliver.notificarOfertasPorCategoria("Computer Science").get(0).getCorreo());
     }
 }

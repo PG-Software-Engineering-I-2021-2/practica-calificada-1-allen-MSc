@@ -32,11 +32,11 @@ public class Oliver {
         return librosEncontrados;
     }
 
-    public List<Estudiante> notificarOfertasPorCategoría(String categoria) {
+    public List<Estudiante> notificarOfertasPorCategoria(String categoria) {
         ArrayList<Estudiante> estudiantesNotificados = new ArrayList<>();
 
         for (Map.Entry<Integer, Estudiante> entry : estudiantes.entrySet()) {
-            if(entry.getValue().getCategoriaDeInteres() == categoria) {
+            if(entry.getValue().getCategoriaDeInteres().equals(categoria)) {
                 Estudiante estudiante = estudiantes.get(entry.getKey());
                 estudiante.notificar();
 

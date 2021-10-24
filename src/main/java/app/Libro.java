@@ -1,20 +1,17 @@
 package app;
 
-import java.util.logging.Logger;
-
 public class Libro {
-    private static Logger logger = Logger.getLogger(Libro.class.getName());
 
     private final String nombre;
     private final String anio;
     private final Autor autor;
-    private final String categoría;
+    private final String categoria;
 
-    public Libro(String nombre, String anio, Autor autor, String categoría) {
+    public Libro(String nombre, String anio, Autor autor, String categoria) {
         this.nombre = nombre;
         this.anio = anio;
         this.autor = autor;
-        this.categoría = categoría;
+        this.categoria = categoria;
     }
 
     public String getNombre() {
@@ -29,7 +26,7 @@ public class Libro {
         return autor;
     }
 
-    public String getCategoría() {
-        return categoría;
+    public String getCategoria() {
+        return categoria;
     }
 }
